@@ -6,7 +6,7 @@ import {
   $string,
   $union,
   access,
-} from "https://esm.sh/lizod@0.2.4";
+} from "https://esm.sh/lizod@0.2.6/";
 
 const isOption = $object({
   granularity: $opt(
