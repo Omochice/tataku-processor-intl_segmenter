@@ -1,4 +1,4 @@
-import { Denops } from "https://deno.land/x/denops_std@v5.0.0/mod.ts";
+import { Denops } from "https://deno.land/x/denops_std@v5.0.1/mod.ts";
 import {
   $const,
   $object,
@@ -6,7 +6,7 @@ import {
   $string,
   $union,
   access,
-} from "https://esm.sh/lizod@0.2.4";
+} from "https://esm.sh/lizod@0.2.6/";
 
 const isOption = $object({
   granularity: $opt(
