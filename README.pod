@@ -1,0 +1,75 @@
+---
+name: tataku-processor-intl_segmenter
+description: The processor module for tataku.vim
+---
+
+=pod
+
+=head1 tataku-processor-intl_segmenter X<tataku-processor-intl_segmenter>
+
+The processor module for tataku.vim.
+
+This split the sentence by L<C<Intl.Segmenter>|https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter>.
+
+=head2 Contents X<tataku-processor-intl_segmenter-contents>
+
+=over 0
+
+=item * L<tataku-processor-intl_segmenter-dependencies>
+
+=item * L<tataku-processor-intl_segmenter-options>
+
+=item * L<tataku-processor-intl_segmenter-samples>
+
+=back
+
+=head2 Dependencies X<tataku-processor-intl_segmenter-dependencies>
+
+This plugin needs:
+
+=over 0
+
+=item * L<denops.vim|https://github.com/vim-denops/denops.vim>
+
+=item * L<tataku.vim|https://github.com/Omochice/tataku.vim>
+
+=back
+
+=head2 Options X<tataku-processor-intl_segmenter-options>
+
+This module has some options.
+
+=over 0
+
+=item * C<locale> X<tataku-processor-intl_segmenter-options-locale>
+
+  Target locale string. (required)
+  See: L<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter#locales>
+
+=item * C<granularity> X<tataku-processor-intl_segmenter-options-granularity>
+
+  How granularly should the input be split.
+  See: L<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter#granularity>
+  default: C<sentence>
+
+=back
+
+=head2 Samples X<tataku-processor-intl_segmenter-samples>
+
+=begin vim
+
+let g:tataku_recipes = #{
+  \   sample: #{
+  \     collector: #{
+  \       name: 'intl_segmenter',
+  \       options: #{
+  \         locales: 'en',
+  \         granularity: 'sentence',
+  \       },
+  \     }
+  \   }
+  \ }
+
+=end vim
+
+=cut
