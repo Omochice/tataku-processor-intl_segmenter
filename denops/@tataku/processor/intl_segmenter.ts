@@ -1,4 +1,4 @@
-import { Denops } from "https://deno.land/x/denops_std@v6.4.1/mod.ts";
+import { Denops } from "https://deno.land/x/denops_std@v6.4.2/mod.ts";
 import {
   $const,
   $object,
