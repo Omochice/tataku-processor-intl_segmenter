@@ -12,11 +12,11 @@ jobs:
   Run-deno-task-readme:
     runs-on: ubuntu-latest
     steps:
-      - uses: denoland/setup-deno@v1
+      - uses: denoland/setup-deno@041b854f97b325bd60e53e9dc2de9cb9f9ac0cba # v1.1.4
         with:
           deno-version: vx.x.x
       - name: Check out repository code
-        uses: actions/checkout@v4
+        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
       - name: Generate readme
         run: deno task docs
       - name: Create commits
@@ -27,7 +27,7 @@ jobs:
           git commit -m "docs: Generate docs"
           git clean -fdx
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v5
+        uses: peter-evans/create-pull-request@4e1beaa7521e8b457b572c090b25bd3db56bf1c5 # v5.0.3
         with:
           title: "docs: Update docs"
           body: |
